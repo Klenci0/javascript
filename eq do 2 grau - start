@@ -1,0 +1,10 @@
+let a = 1
+let b = 1 
+let c = -12
+
+const delta = b**2 - 4 * a * c
+
+let x1 = (-a + Math.sqrt(delta)) / 2
+let x2 = (-a - Math.sqrt(delta)) / 2
+
+console.log('as raizes da equação são:', x1, 'e', x2,".")
