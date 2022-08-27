@@ -1,0 +1,57 @@
+const prompt = require("prompt-sync")();
+
+temps = ["celsious","farenheight", "kelvin"];
+
+console.log("escolha uma temperatura a ser convertida: ");
+abtc = Number(prompt(" (1) farenheight (2) celsious (3) kelvin "));
+
+if ( 3 < abtc > 1 ) {
+    console.log("cara, você só pode digitar de 1 até 3...");
+}
+
+numb = Number(prompt("digite seu módulo: "));
+
+console.log("escolha uma temperatura final: ");
+okc = Number(prompt(" (1) farenheight (2) celsious (3) kelvin "));
+
+
+if ( 3 < okc > 1 ) {
+    console.log("cara, você só pode digitar de 1 até 3...");
+}
+
+//farenheight pra celsious
+if (abtc == 1 && okc == 2) {
+   let ftoc = (numb - 32) * 5 /9
+    console.log("a temperatura é", ftoc,temps[0])
+} //'ok'
+
+//farenheight pra kelvin
+if (abtc == 1 && okc == 3) {
+    let ftok = 5 * (numb - 32) / 9 + 273
+    console.log("a temperatura é", ftok,temps[2])
+} //'ok'
+
+//celsious pra farenheight 
+if (abtc == 2 && okc == 1) {
+    let ctof = 5 *(numb - 32) / 9 
+    console.log("a temperatura é", ctof,temps[1])
+}//'ok'
+
+//celsious pra kelvin
+if (abtc == 2 && okc == 3) {
+    let ctok = numb + 273
+    console.log("a temperatura é", ctok,temps[2])
+}//'ok'
+
+//kelvin pra farenheight
+if (abtc == 3 && okc == 1) {
+    let ktof = (numb-273) *1.8 + 32
+    console.log("a temperatura é", ktof,temps[1])
+} //'ok'
+
+
+//kelvin pra celsious 
+if (abtc == 3 && okc == 2) {
+    let ktoc = numb - 273
+    console.log("a temperatura é", ktoc ,temps[0])
+}//'ok'
